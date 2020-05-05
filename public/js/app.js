@@ -9,7 +9,7 @@ searchForm.addEventListener('submit', (e) => {
 	price.textContent = 'Loading...'
 	change.textContent = ''
 
-	fetch(`http://localhost:3000/stock?address=${symbol}`).then((res) => {
+	fetch(`/stock?address=${symbol}`).then((res) => {
 		res.json().then((data) => {
 			if(data.error) {
 				price.textContent = data.error
